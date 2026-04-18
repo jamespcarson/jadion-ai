@@ -570,6 +570,18 @@ h2 {
   padding: 7rem 4rem;
 }
 
+.founder-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter 0.3s;
+}
+
+.founder-card:hover .founder-photo { filter: grayscale(0%) contrast(1.05); }
+
 .founders-inner { max-width: 1100px; margin: 0 auto; }
 
 .founders-grid {
@@ -650,6 +662,16 @@ h2 {
 
 .bio-back {
   margin-bottom: 3rem;
+}
+
+.bio-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin-bottom: 2rem;
+  filter: grayscale(10%) contrast(1.05);
 }
 
 .bio-back .btn-ghost svg { transition: transform 0.2s; }
