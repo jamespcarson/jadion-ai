@@ -2,11 +2,6 @@
    Jadion.AI — main.js
    ============================================================ */
 
-/**
- * Waitlist form submission.
- * TODO: Replace the client-side success state with a real
- * form backend (Formspree, Airtable, etc.) before going live.
- */
 function handleSubmit() {
   var input = document.getElementById('email-input');
   var val = input ? input.value : '';
@@ -23,11 +18,6 @@ function handleSubmit() {
   document.getElementById('success-msg').style.display = 'block';
 }
 
-
-/**
- * Scroll-reveal observer.
- * Adds .visible to any element with .reveal once it enters the viewport.
- */
 (function () {
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

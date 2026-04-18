@@ -609,6 +609,20 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
+.read-more {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: gap 0.2s;
+}
+
+.read-more:hover { gap: 10px; }
+
 .founder-credentials {
   padding-top: 1.25rem;
   border-top: 1px solid rgba(0,62,133,0.4);
@@ -623,6 +637,56 @@ h2 {
   color: rgba(245,241,234,0.45);
   border: 1px solid rgba(0,62,133,0.5);
   padding: 0.2rem 0.6rem;
+}
+
+
+/* BIO PAGES
+   ============================================================ */
+.bio-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8rem 4rem 6rem;
+}
+
+.bio-back {
+  margin-bottom: 3rem;
+}
+
+.bio-back .btn-ghost svg { transition: transform 0.2s; }
+.bio-back .btn-ghost:hover svg { transform: translateX(-4px); }
+
+.bio-header {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0,62,133,0.3);
+}
+
+.bio-name {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.bio-tag-row {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+
+.bio-body p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(245,241,234,0.8);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.bio-cta {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0,62,133,0.3);
 }
 
 
@@ -785,6 +849,7 @@ footer {
   #engagement               { padding: 5rem 1.5rem; }
   #waitlist                 { padding: 5rem 1.5rem; }
   #founders                 { padding: 5rem 1.5rem; }
+  .bio-page                 { padding: 6rem 1.5rem 4rem; }
   .thesis-inner             { grid-template-columns: 1fr; gap: 3rem; }
   .thesis-stat-grid         { grid-template-columns: 1fr 1fr; }
   .service-cards            { grid-template-columns: 1fr; }
