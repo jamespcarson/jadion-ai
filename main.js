@@ -1,11 +1,9 @@
-/* ============================================================
-   Jadion.AI — main.js
-   ============================================================ */
-
 async function handleSubmit() {
   var input = document.getElementById('email-input');
+  var notesInput = document.getElementById('notes-input');
   var btn = document.querySelector('.waitlist-btn');
   var val = input ? input.value.trim() : '';
+  var notes = notesInput ? notesInput.value.trim() : '';
 
   if (!val || !val.includes('@')) {
     input.style.borderColor = 'rgba(255,255,255,0.7)';
@@ -20,15 +18,12 @@ async function handleSubmit() {
     btn.disabled = true;
   }
 
-var response = await fetch('/api/submit', {
+  try {
+    var response = await fetch('/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        email: val,
-        notes: document.getElementById('notes-input').value.trim(),
-      }),
+      body: JSON.stringify({ email: val, notes: notes }),
     });
-    
 
     if (response.ok) {
       document.getElementById('form-wrap').style.display = 'none';
