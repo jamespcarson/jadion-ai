@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email } = req.body;
+  const { email, notes } = req.body;
 
   if (!email || !email.includes('@')) {
     return res.status(400).json({ error: 'Valid email required' });
@@ -22,6 +22,8 @@ export default async function handler(req, res) {
           fields: {
             Email: email,
             Status: 'New',
+            Submitted: new Date().toISOString().split('T')[0],
+            Notes: notes || '',
           },
         }),
       }

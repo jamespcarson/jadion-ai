@@ -20,12 +20,15 @@ async function handleSubmit() {
     btn.disabled = true;
   }
 
-  try {
-    var response = await fetch('/api/submit', {
+var response = await fetch('/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: val }),
+      body: JSON.stringify({ 
+        email: val,
+        notes: document.getElementById('notes-input').value.trim(),
+      }),
     });
+    
 
     if (response.ok) {
       document.getElementById('form-wrap').style.display = 'none';

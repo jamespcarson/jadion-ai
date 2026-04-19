@@ -782,6 +782,28 @@ h2 {
   transition: background 0.2s;
 }
 
+.waitlist-textarea {
+  width: 100%;
+  max-width: 480px;
+  margin: 0.75rem auto 0;
+  display: block;
+  padding: 0.875rem 1.25rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  outline: none;
+  resize: none;
+  transition: background 0.2s;
+  line-height: 1.6;
+}
+
+.waitlist-textarea::placeholder { color: rgba(255,255,255,0.45); }
+.waitlist-textarea:focus { background: rgba(255,255,255,0.15); }
+
+
 .waitlist-input::placeholder { color: rgba(255,255,255,0.45); }
 .waitlist-input:focus         { background: rgba(255,255,255,0.15); }
 
